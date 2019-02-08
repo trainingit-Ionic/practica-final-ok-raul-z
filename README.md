@@ -12,6 +12,7 @@ Se trata de desarrollar una app que sirva para realizar listas de la compra
 - Solamente se puede tener una única lista de la compra en la app.
 - Si la app pasa a segundo plano o se cierra, al volver a entrar, el usuario debe debe tener la lista exactamente tal como la dejó.
 - Debe tener algún mecanismo para "volver a empezar", es decir para poder hacer una nueva lista de la compra. Ya sea eliminando todos los ítems para resetearla, ya sea dejando al usuario eliminar ítems concretos y añadir otros nuevos, ya sea de cualquier otra forma.
+- Se debe cambiar el icono de la app y la splash screen por otros que no sean los de por defecto de Ionic.
 
 ### Funcionalidades opcionales de la app
 
