@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Carrito</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismissModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item *ngFor="let item of modalItemList">
+        <ion-label>
+          {{item.name}}
+        </ion-label>
+        <ion-button size="small" color="danger" (click)="deleteItem(item)">Eliminar</ion-button>
+      </ion-item>
+  </ion-list>
+  <ion-button color="danger" (click)="clearList()">Vaciar carrito</ion-button>
+</ion-content>

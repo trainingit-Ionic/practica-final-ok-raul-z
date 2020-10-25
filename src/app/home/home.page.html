@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">    
+    <ion-title (click)="checkout()">
+      <ion-icon name="cart"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding> 
+
+  <ion-card *ngFor="let item of itemsData">
+    <ion-card-header>      
+      <ion-card-title>{{item.name}}</ion-card-title>
+      <ion-card-subtitle>{{item.price}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{item.description}}
+    </ion-card-content>
+    <ion-row class="cardfooter">
+      <ion-col>
+        <ion-button size="small" color="success" (click)="addItem(item)" *ngIf="!item.selected">
+          Añadir
+        </ion-button>
+        <ion-button size="small" color="danger" (click)="deleteItem(item)" *ngIf="item.selected">
+          Eliminar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
